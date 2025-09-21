@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="css/estilo.css" />
+
+    <!-- Estilos SOLO para el cuadro de juegos (no afecta el resto) -->
+    <style>
+      /* Caja en Contacto con los colores de “Correo” */
+      .cta-juegos-box{
+        max-width: 980px;
+        margin: 28px auto 0;
+        padding: 18px 16px;
+        border: 2px solid #940253;          /* color Correo */
+        border-radius: 16px;
+        background: #101012;                /* tono oscuro */
+        box-shadow:
+          0 0 0 3px rgba(148, 2, 83, 0.12),
+          0 12px 28px rgba(0,0,0,0.45);
+      }
+      .cta-juegos-title{
+        margin: 0 0 12px;
+        text-align: center;
+        color: #940253;                     /* título en magenta */
+        font-weight: 800;
+        letter-spacing: .3px;
+      }
+      .juegos-botones{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      /* Reutiliza tu estilo de .btn-cv y suma pequeños ajustes visuales */
+      .btn-juego{
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        border-radius: 12px;
+        box-shadow: 0 4px 0 rgba(0,0,0,.35) inset;
+      }
+      .btn-juego:hover{ transform: translateY(-1px); }
+      @media (max-width: 560px){
+        .cta-juegos-box{ margin-left: 12px; margin-right: 12px; }
+      }
+    </style>
+
+    <title>CV EDUARDO EXEQUIEL LUCERO PEÑA</title>
+</head>
+<body>
+    <!-- SECCION INICIO -->
+    <section class="inicio" id="inicio">
+        <div class="contenido-seccion">
+            <header>
+                <div class="nav-bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <nav id="nav" class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobremi">Sobre mí</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#resumen">Resumen</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="logo">
+                    Curriculum<span class="color"> Vitae</span>
+                </div>
+            </header>
+
+            <div class="info">
+                <h1>Eduardo Exequiel Lucero Peña</h1>
+                <h2>Desarrollador de Software (3° año)</h2>
+
+                <!-- Redes -->
+                <div class="redes">
+                    <a aria-label="Facebook" href="https://www.facebook.com/share/1FZUgSirq8/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a aria-label="Instagram" href="https://www.instagram.com/eduardoexequiellucero?utm_source=qr&igsh=YWJhaTFhMXo0b283" target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a aria-label="YouTube" href="https://www.youtube.com/channel/UC3TFPDldkQ7dgjBrrRTjouA" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                    <a aria-label="LinkedIn" href="https://www.linkedin.com/in/eduardo-exequiel-lucero-pe%C3%B1a-57177435b" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a aria-label="GitHub" href="https://github.com/eduardoexequiel" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <!-- Botones centrados -->
+                <div class="cta-cv">
+                  <a class="btn-cv" href="curriculum/cv.pdf" download="Eduardo_Lucero_CV.pdf">
+                    <i class="fa-solid fa-file-arrow-down"></i> Descargar CV
+                  </a>
+                  <a class="btn-cv" href="curriculum/certificaciones.pdf" download="Eduardo_Lucero_Certificaciones.pdf">
+                    <i class="fa-solid fa-file-pdf"></i> Descargar Certificaciones
+                  </a>
+                </div>
+            </div>
+
+            <div class="foto">
+                <img src="img/edu2.png" alt="Foto de Eduardo" />
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section class="sobremi" id="sobremi">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Sobre Mi</h2>
+            <br />
+            <h3>Detalles personales</h3>
+
+            <p class="especial">
+              "Saludos, me gustaría compartir un poco sobre mí. Nací en Mendoza, Argentina, el 04 de abril de 1988 (37 años), bajo el signo de Aries. Me considero una persona entusiasta y perseverante, siempre en busca de superar desafíos. Actualmente curso el 3° año de la Tecnicatura Superior en Desarrollo de Software. Si estás interesado, puedo proporcionarte más detalles sobre mi trayectoria."
+            </p>
+
+            <div class="fila">
+                <div class="col">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="titulo-detalle">Perfil</span>
+                    <p>Busco una oportunidad laboral en el campo de Desarrollo de Software, donde pueda aplicar y ampliar mis habilidades en lenguajes de programación y desarrollo web para contribuir al crecimiento de la empresa.</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <span class="titulo-detalle">Ubicación</span>
+                    <p>Vicente Polimeni 655, Las Heras, Mendoza</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="titulo-detalle">Intereses</span>
+                    <p>Encontrar una organización que me permita aplicar los conocimientos adquiridos en los años de estudio, así como mi capacidad de planificación, organización y dirección del funcionamiento de una empresa. Formar parte de un equipo de trabajo y consolidarme profesionalmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION HABILIDADES -->
+    <section class="habilidades" id="habilidades">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Mis habilidades</h2>
+            <h3>Me especializo en</h3>
+
+            <div class="fila">
+                <div class="col">
+                    <span>HTML/CSS</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="html"></div>
+                        <span>60%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>JAVASCRIPT</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="javascript"></div>
+                        <span>20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="col">
+                    <span>PHP</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="wordpress"></div>
+                        <span>30%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>PYTHON</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="photoshop"></div>
+                        <span>20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="col">
+                    <span>JAVA</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="php"></div>
+                        <span>50%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>INTELIGENCIA ARTIFICIAL</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="ia"></div>
+                        <span>50%</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCION RESUMEN -->
+    <section class="resumen" id="resumen">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Resumen</h2>
+            <h3>Mi preparación y experiencia</h3>
+            <div class="info">
+                <div class="col" style="padding-top: 30px;">
+                    <span class="titulo">Educación</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>En curso</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Desarrollo de aplicaciones, bases de datos, lógica y metodologías ágiles.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Técnico Superior en Desarrollo de Software</h4>
+                                <p>Instituto Superior Manuel Belgrano (3° año)</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>1° año cursado</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Redes y Telecomunicaciones (base en infraestructura y conectividad).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Téc. Univ. en Redes y Telecomunicaciones</h4>
+                                <p>Instituto Tecnológico Universitario</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2007</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Armado, diagnóstico y reparación de PC (32 horas).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Curso Armado y Reparación de PC</h4>
+                                <p>Instituto Provincial de la Juventud</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col" style="padding-top: 30px;">
+                    <span class="titulo">Experiencia Laboral</span>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>Actualidad</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Gestión de sucursales, atención al cliente, administración de personal y supervisión de procesos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Mailho</h4>
+                                <p>Sucursales Sexta, Panamericana y Quinta - Mendoza</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="datos">
+                                <h3>2009 - 2010</h3>
+                            </td>
+                            <td rowspan="2" class="descripcion">
+                                Atención al público, caja, mantenimiento de equipos y gestión de servicios telefónicos e internet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Locutorio Telefónica e Internet</h4>
+                                <p>Las Heras, Mendoza</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <h3>¡Ponte en contacto ahora mismo!</h3>
+            <div class="fila">
+                <div class="col">
+                    <h2><i class="fa-solid fa-phone"></i> Teléfono</h2>
+                    <span class="info-contacto">261-6388008</span>
+                </div>
+                <div class="col">
+                    <h2><i class="fa-solid fa-envelope"></i> Correo</h2>
+                    <span class="info-contacto">eduardoexequiel@gmail.com</span>
+                    <br />
+                    <a class="info-redireccinar" href="mailto:eduardoexequiel@gmail.com?subject=Contacto&amp;body=Consulta">En caso de otra consulta seleccionar para enviar un email</a>
+                </div>
+                <div class="col">
+                    <h2><i class="fa-solid fa-globe"></i> Página Web</h2>
+                    <span class="info-contacto">en espera</span>
+                </div>
+            </div>
+
+            <!-- CUADRO: Invitación a juegos (dentro de Contacto) -->
+            <div class="cta-juegos-box" role="region" aria-label="Juegos creados por Eduardo">
+              <h4 class="cta-juegos-title">¿Te gustaría jugar un juego hecho por mí?</h4>
+              <div class="juegos-botones">
+                <a class="btn-cv btn-juego" href="Flappy Bird/indexJuego1.html" target="_blank">🎮 Flappy Web</a>
+                <a class="btn-cv btn-juego" href="JEdu/indexJuego2.html" target="_blank">🚀 Neo Retro Saga</a>
+              </div>
+            </div>
+            <!-- /CUADRO -->
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="js/app.js"></script>
+
+    <!-- Botón flotante WhatsApp -->
+    <a class="whatsapp-float"
+       href="https://wa.me/5492616388008?text=Hola%20Eduardo%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte"
+       target="_blank" aria-label="Escribir por WhatsApp" rel="noopener">
+      <span class="whatsapp-pulse" aria-hidden="true"></span>
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>

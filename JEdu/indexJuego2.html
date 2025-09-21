@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neo Retro Saga</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Estilos y juego -->
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="title">Neo-Retro Saga</div>
+    <div class="score" id="hudScore" aria-live="polite">Puntaje: 0</div>
+  </header>
+
+  <main class="layout">
+    <!-- id agregado para medición exacta del ancho en JS -->
+    <aside class="sidebar" id="levelsPanel">
+      <h3>⚡ Niveles</h3>
+      <button class="sidebtn" id="btnL1">1) Runner</button>
+      <button class="sidebtn" id="btnL2">2) Arkanoid</button>
+      <button class="sidebtn" id="btnL3">3) Asteroides</button>
+      <button class="sidebtn" id="btnL4">4) Buscaminas</button>
+      <p class="sidehint">Atajos para probar. El progreso normal sigue igual.</p>
+    </aside>
+
+    <div class="wrap grid-bg">
+      <canvas id="game" width="360" height="640"></canvas>
+
+      <!-- Carteles / historias -->
+      <div class="overlay" id="overlay" hidden>
+        <div class="card" id="overlayCard"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Controles: <span class="controls">
+      Nivel 1/2: ← → mover • ↑/Espacio saltar/disparar
+      | Nivel 3: ←/→ rotar • ↑ acelerar • ↓ frenar • Espacio disparar
+      | Nivel 4: click • long-press/der. para marcar
+    </span>
+  </footer>
+</body>
+</html>
+
+
+
